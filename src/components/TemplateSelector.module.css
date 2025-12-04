@@ -1,0 +1,168 @@
+.container {
+  padding: 20px;
+}
+
+.container h2 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 0;
+  border: 3px solid rgba(131, 56, 236, 0.5);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.05) 0%, rgba(131, 56, 236, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover:not(.disabled) {
+  border-color: #ffbe0b;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.15) 0%, rgba(131, 56, 236, 0.15) 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(255, 0, 110, 0.3);
+}
+
+.card.selected {
+  border-color: #ffbe0b;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.2) 0%, rgba(131, 56, 236, 0.2) 100%);
+  box-shadow: 0 0 20px rgba(255, 190, 11, 0.4);
+}
+
+.cardPreview {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.previewPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 190, 11, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%);
+  font-size: 48px;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.previewPlaceholder p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.card:hover .previewPlaceholder {
+  background: linear-gradient(135deg, rgba(255, 190, 11, 0.2) 0%, rgba(131, 56, 236, 0.2) 100%);
+}
+
+.placeholderImage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%);
+  font-size: 48px;
+}
+
+.card h3 {
+  margin: 0;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.invalid {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.cardContent {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description {
+  margin: 8px 0 16px 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.selectBtn {
+  background: linear-gradient(135deg, #8338ec 0%, #6c2fb5 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.selectBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #9548ff 0%, #7c3fc5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(131, 56, 236, 0.5);
+}
+
+.selectBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.previewBtn {
+  background: linear-gradient(135deg, #ffbe0b 0%, #ffaa00 100%);
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.previewBtn:hover {
+  background: linear-gradient(135deg, #ffd700 0%, #ffbe0b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 190, 11, 0.4);
+}

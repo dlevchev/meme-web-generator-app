@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.buildBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.buildBtn:hover:not(:disabled) {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+.buildBtn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.progress {
+  font-size: 14px;
+  color: #64ff64;
+  margin: 0;
+}
+
+.error {
+  font-size: 14px;
+  color: #ff6b6b;
+  margin: 0;
+}

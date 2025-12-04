@@ -1,0 +1,235 @@
+.container {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 40px 0;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ctaButton {
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 8px 24px rgba(255, 0, 110, 0.4);
+  width: fit-content;
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(255, 0, 110, 0.6);
+}
+
+.guideButton {
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffbe0b, #ff8f00);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 8px 24px rgba(255, 190, 11, 0.4);
+  width: fit-content;
+}
+
+.guideButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(255, 190, 11, 0.6);
+}
+
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visualBox {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%);
+  border: 3px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  animation: gradientBorder 3s ease-in-out infinite;
+}
+
+@keyframes gradientBorder {
+  0%, 100% {
+    border-image: linear-gradient(135deg, #ff006e, #8338ec) 1;
+  }
+  50% {
+    border-image: linear-gradient(135deg, #8338ec, #3a86ff) 1;
+  }
+}
+
+.memePreview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(15, 15, 30, 0.9) 0%, rgba(26, 0, 51, 0.9) 100%);
+}
+
+.previewPlaceholder {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.previewPlaceholder span {
+  font-size: 80px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.previewPlaceholder p {
+  font-size: 18px;
+  color: #999;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 60px 0;
+  border-top: 2px solid rgba(131, 56, 236, 0.3);
+}
+
+.featureCard {
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.05) 0%, rgba(131, 56, 236, 0.05) 100%);
+  border: 2px solid rgba(131, 56, 236, 0.3);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.featureCard:hover {
+  border-color: #ffbe0b;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(255, 0, 110, 0.2);
+}
+
+.featureIcon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.featureCard h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 16px 0 12px 0;
+  color: #fff;
+}
+
+.featureCard p {
+  font-size: 15px;
+  color: #aaa;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-bottom: 60px;
+    padding: 20px 0;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .heroSubtitle {
+    font-size: 15px;
+  }
+
+  .ctaButton {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+  }
+
+  .featureCard {
+    padding: 24px;
+  }
+
+  .featureIcon {
+    font-size: 36px;
+  }
+}

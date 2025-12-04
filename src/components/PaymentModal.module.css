@@ -1,0 +1,202 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  background: linear-gradient(135deg, #8338ec 0%, #3a86ff 100%);
+  color: white;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.closeBtn:hover {
+  opacity: 0.8;
+}
+
+.content {
+  padding: 30px;
+}
+
+.paymentInfo {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.infoRow:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.infoRow span:first-child {
+  color: #666;
+  font-weight: 500;
+}
+
+.amount {
+  font-weight: bold;
+  color: #8338ec;
+  font-size: 16px;
+}
+
+.sufficient {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.insufficient {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.error {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border: 1px solid #ef5350;
+}
+
+.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border: 1px solid #ffeaa7;
+}
+
+.payButton {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #8338ec 0%, #3a86ff 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 10px;
+}
+
+.payButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(131, 56, 236, 0.3);
+}
+
+.payButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.footer {
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.tier {
+  background: linear-gradient(135deg, #8338ec 0%, #3a86ff 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.basePrice {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 13px;
+}
+
+.discount {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, #8338ec 0%, #3a86ff 100%);
+  margin: 10px 0;
+}
+
+.finalLabel {
+  font-weight: 600;
+  color: #333;
+}
+
+.finalAmount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #8338ec;
+}
+
+.free {
+  font-size: 20px;
+  font-weight: bold;
+  color: #27ae60;
+}

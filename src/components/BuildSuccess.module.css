@@ -1,0 +1,120 @@
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.successBox {
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%);
+  border: 3px solid #ffbe0b;
+  border-radius: 16px;
+  padding: 50px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 0 40px rgba(255, 190, 11, 0.4);
+}
+
+.successBox h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffbe0b;
+  font-weight: 900;
+  text-shadow: 0 2px 8px rgba(255, 190, 11, 0.3);
+}
+
+.successBox p {
+  font-size: 17px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.buildId {
+  font-size: 14px;
+  color: #999;
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.downloadBtn,
+.newBtn,
+.guideBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.downloadBtn {
+  background: linear-gradient(135deg, #ffbe0b, #ff8f00);
+  color: #000;
+  font-weight: 900;
+}
+
+.downloadBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 190, 11, 0.6);
+}
+
+.downloadBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.newBtn {
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  color: white;
+  font-weight: 700;
+}
+
+.newBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 0, 110, 0.5);
+}
+
+.guideBtn {
+  background: linear-gradient(135deg, #8338ec, #5a189a);
+  color: white;
+  font-weight: 700;
+}
+
+.guideBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(131, 56, 236, 0.6);
+}
+
+.autoDeleteTimer {
+  font-size: 14px;
+  color: #ffbe0b;
+  margin-top: 20px;
+  font-weight: 600;
+  animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
