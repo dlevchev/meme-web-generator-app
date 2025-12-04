@@ -5,8 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Production
-app/dist/
-app/node_modules/
+dist/
+node_modules/
 
 # Environment variables
 .env
